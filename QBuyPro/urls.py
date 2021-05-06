@@ -22,6 +22,7 @@ from QBuyPro import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('active/', include('actives.urls', namespace='active')),
+    path('user/', include('user.urls', namespace='user')),
 
 
 ]+static(settings.MEDIA_URL,
