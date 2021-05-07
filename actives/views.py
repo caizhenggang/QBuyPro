@@ -20,7 +20,7 @@ class ActiveGoodsView(TemplateView):
 
         return context
 
-def qbuy_api(request, goods_id):
+def quby_api(request, goods_id):
     # 验证当前用户是否已登录
     login_user = request.session.get('login_user', None)
     if not login_user:

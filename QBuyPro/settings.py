@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'goods',
     'order',
     'user',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -171,3 +173,17 @@ LOGGING = {
 
 # 配置celery
 CELERY_IMPORTS = ('',)
+
+# 配置 REST_FRAMEWORK配置
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework.authentication.BasicAuthentication',
+#         'rest_framework.authentication.SessionAuthentication',
+#     ]
+# }
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    )
+}
